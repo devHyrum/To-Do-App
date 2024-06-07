@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0, 700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/c30d2576b3.js" crossorigin="anonymous"></script>
+  <title>To-Do App</title>
+</head>
+<body>
+    <div class="container">
+
+      <h1>#todo</h1>
+
+      <nav class="nav">
+        <ul class="nav_list">
+          <li class="list_item_container" id="all"><span class="list_item active">All</span></li> <!--dá para cololcar um div-->
+          <li class="list_item_container" id="active"><span class="list_item">Active</span></li>
+          <li class="list_item_container" id="completed"><span class="list_item">Completed</span></li>
+        </ul>
+      </nav>
+
+      <div class="bar-container">
+
+        <div id="bar">
+          <input type="text" class="barInput" name="barBeauty" placeholder="add details">
+          <button type="button" class="button" id="button">Add</button>
+        </div>
+
+        <nav class="aTask">
+          <ul class="aItem">
+              <li ><input type="checkbox" id="item1" name="item1"><label for="item1">Do coding challenges</label><i id="trashJava" class="fa-solid fa-trash"></i></li> 
+              <li><input type="checkbox" id="item2" name="item2"><label for="item2">Do coding challenges</label><i id="trashJava" class="fa-solid fa-trash"></i></li>
+              <li><input type="checkbox" id="item3" name="item3" checked><label for="item3" class="strikethrough">Do coding challenges</label><i id="trashJava" class="fa-solid fa-trash"></i></li> <!--Aqui deixamos com 'checked' e class="strikethrough"-->
+              <li><input type="checkbox" id="item4" name="item4"><label for="item4">Project CSS 5.4 Final Cut</label><i id="trashJava" class="fa-solid fa-trash"></i></li> 
+              <li><input type="checkbox" id="item5" name="item5" checked><label for="item5" class="strikethrough">HTML Website HardCore</label><i id="trashJava" class="fa-solid fa-trash"></i></li>
+              <li><input type="checkbox" id="item6" name="item6" checked><label for="item6" class="strikethrough">Python Detection Move</label><i id="trashJava" class="fa-solid fa-trash"></i></li>
+          </ul> 
+        </nav>
+
+        <div id="buttonContainer">
+          <button type="button" class="deleteButton"><i class="fa-solid fa-trash"></i>delete all</button>
+        </div>
+
+      </div>
+
+    </div>
+</body>
+</html>

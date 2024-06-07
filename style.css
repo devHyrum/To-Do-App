@@ -1,0 +1,203 @@
+*{ /* Estilizar todo la pagina web */
+    padding: 0;
+    margin: 10px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif; /* Fuente principal de Google*/
+    font-size: 20px;
+}
+body div h1{
+    text-align: center; /*Centralizar el texto*/
+}
+.container { /*Puede ser una caja flutuante, pero com no queremos eso, quitamos box-shadows*/
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/ 
+}
+.nav{ /*Dimensiona la caja que contiene los titulos*/
+    padding: 0;
+    flex-wrap: nowrap;
+}
+.nav_list{ /*Dimensiona los 'ul' que contiene los 'li'*/
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 3px solid #ddd; 
+    cursor: pointer;
+}
+.list_item_container { /*Cada titulo de la lista */
+    display: inline-block; 
+    padding: 0 10px;
+    position: relative;
+}
+.list_item{ /*Cada titulo de la lista por el spam */
+    margin: 0%;
+    padding: 10px;
+} 
+.list_item.active { /*Cuando se activa deja en posición más abajo*/
+    position: relative; /* Necessário para posicionamento do pseudo-elemento */
+    }
+    .list_item.active::after { /* Estiliza las bordas y posición */
+        content: ''; 
+        position: absolute; 
+        bottom: -3px; 
+        left: 0; 
+        width: 100%; 
+        height: 5px; 
+        background-color: #5c9cf1; 
+        border-top-right-radius: 4px; 
+        border-top-left-radius: 4px;
+    }
+#bar{ /*Dimensiona el div que contiene el input y button*/
+    display: flex;
+    align-items: center;
+}
+.barInput { /*Dimensiona el input y lo decora*/
+    width: 550px;
+    flex: 1; 
+    border-radius: 10px;
+    border: 2px solid #ccc; 
+    padding: 15px 10px;
+    }
+    .barInput:focus {
+        outline: none; 
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+.button { /*Define el tamaño del button 'add'*/
+    width: 130px; 
+    background-color: #2f80ed; 
+    color: white; 
+    border: none; 
+    padding: 15px 30px; 
+    cursor: pointer; 
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .button:hover {
+    background-color: #2980b9;
+  }
+.aItem li { /*Dimensiona todas las 'li' */
+    display: flex;
+    align-items: center; 
+}
+.aItem input[type="checkbox"] { /*Dimensiona y estiliza el 'checkbox*/
+    appearance: none; /* Elimina el estilo predeterminado del sistema */
+    -webkit-appearance: none; /* Para navegadores basados ​​en Webkit como Chrome y Safari */
+    -moz-appearance: none; /* Para navegadores basados ​​en Gecko como Firefox */
+    width: 23px; 
+    height: 23px; 
+    border: 2px solid #ccc;
+    border-radius: 2px; 
+    vertical-align: middle;
+    margin-right: -5px;
+    position: relative; 
+    margin-bottom: 12px;
+    }
+    .aItem input[type="checkbox"]:hover{
+        background-color: #f5f5f5;
+        box-shadow: 2px 2px 2px #868686;
+    }
+    .aItem input[type="checkbox"]:checked::before{
+        content: '\2713'; 
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        width: 100%; 
+        height: 100%; 
+        background-color: #2f80ed; 
+        color: white; 
+        border-radius: 2px; 
+        border:2px solid #2f80ed;
+        text-align: center; 
+        font-size: 16px; 
+        font-weight: bold; 
+    }
+    .aItem li:hover input[type="checkbox"]:checked::before {
+        background-color: #2980b9;
+        box-shadow: 2px 2px 2px #194d6f;
+    }
+.strikethrough { /*Efecto de tachado */
+    text-decoration: line-through;
+    color: inherit;
+    text-decoration-color: gray; 
+    text-decoration-thickness: 1px;
+}
+#trashJava {/*Dimensionar y estilizar el tacho de basura*/
+    display: none;
+    margin-left: auto;
+    color: #ccc;
+    right: 50px;
+    cursor: pointer;
+}
+#buttonContainer{ /*Dimensionar y estilizar el div que contiene el button 'delete all'*/
+    display: none;
+    justify-content: flex-end;
+}
+.deleteButton{ /*Dimensionar y estilizar el button 'delete all'*/
+    color: white;
+    background-color: #eb5757;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.deleteButton:hover {
+    background-color: #d44e4e;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+        
+    }
+    .list_item{
+        margin: 0%;
+        padding: 0%;
+        
+    }
+    .list_item.active { /*Cuando se activa deja en posición más abajo*/
+        position: relative; /* Necessário para posicionamento do pseudo-elemento */
+        }
+    .list_item_container {
+        display: inline-block; 
+        padding: 0 10px;
+        margin-bottom: -10px;
+        flex-wrap: nowrap;
+    }
+    .list_item.active::after {
+        content: ''; 
+        position: relative; 
+        width: 100%;
+        bottom: 4px;
+        left: 0px; 
+        height: 5px; 
+        background-color: #5c9cf1; 
+        display: inline-block; 
+    }
+    .aItem li {
+        margin: 0%;
+        padding: 0%;
+    }
+    .aItem{
+        margin: 0%;
+    }
+    #bar{ /*Dimensiona el div que contiene el input y button*/
+        display: flex;
+        align-items: center;
+        margin: 0%;
+    }
+    .barInput {
+        width: calc(100% - 70px);
+    }
+    .button {
+        width: 60px;
+        padding: 15px;
+    }
+    #buttonContainer {
+        margin-top: 10px;
+    }
+}
